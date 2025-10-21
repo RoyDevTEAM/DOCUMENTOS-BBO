@@ -1,4 +1,4 @@
-# Estructura del Archivo Excel para Documentación en GitHub
+# Estructura del Archivo Excel para Carga Masiva
 
 ## 1. Estructura General del Archivo Excel
 
