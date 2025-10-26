@@ -115,3 +115,65 @@ Una vez seleccionado el artículo, debe configurar las condiciones promocionales
 > **Notificaciones de Resultado:**
 > * **Éxito:** Si el artículo se inserta correctamente, aparecerá una notificación de **Éxito**.
 > * **Error:** Si el artículo ya está asociado a esa campaña, el sistema mostrará una notificación de **Error** indicando que la inserción no se completó.
+
+
+**Asociar Lista de Precios:** Esta funcionalidad permite vincular una lista de precios existente a una campaña promocional. Se accede haciendo clic en el botón **$ Lista Precios** en el encabezado de la **Gestión de Campañas**.
+
+Al hacer clic, se abre el modal **"Asociar Lista de Precios"**:
+
+![Modal Asociar Lista Precios 1](./imagen/ModalAsociarListaPrecios1.PNG)
+
+> * **Buscar Campaña:** Utilice la barra de búsqueda para encontrar la promoción deseada, escribiendo parte del **ID** o **nombre** de la campaña.
+> * **Selección de Campaña:** Haga clic en la tarjeta de la campaña (ej. *CAMP-000, ID: 13704*) para seleccionarla. El sistema resaltará la campaña elegida, habilitando el siguiente paso.
+
+Una vez seleccionada la campaña, se habilita la búsqueda y selección de la lista de precios:
+
+> * **Buscar Lista de Precios:** Ingrese el **ID**, **nombre** o **categoría** de la lista de precios que desea asociar.
+> * **Selección de Lista:** Haga clic en la tarjeta de la lista de precios (ej. *AIDISA BENI - AGENCIAS, ID: 217*) para seleccionarla. El sistema resaltará la lista elegida.
+
+![Modal Asociar Lista Precios 2](./imagen/ModalAsociarListaPrecios2.PNG)
+
+**Finalización de la Asociación**
+
+> * **Asociar Lista:** Una vez que la campaña y la lista de precios han sido seleccionadas, haga clic en este botón verde para confirmar y guardar la asociación.
+> * **Cancelar:** Cierra el modal sin guardar la asociación.
+
+> **Notificaciones de Resultado:**
+> * **Éxito:** Si la lista de precios se asocia correctamente a la campaña, aparecerá una notificación de **Éxito**.
+> * **Error:** Si la lista de precios ya está asociada a la campaña, el sistema mostrará una notificación de **Error** indicando que la asociación no se completó.
+
+
+
+**Agregar Requisito:** Esta funcionalidad permite establecer las condiciones mínimas de compra de un artículo que un cliente debe cumplir para poder acceder a una promoción. Se accede haciendo clic en el botón **Requisitos** en el encabezado de la **Gestión de Campañas**.
+
+Al hacer clic, se abre el modal **"Agregar Requisito"**:
+
+![Modal Agregar Requisito 1](./imagen/ModalAgregarRequisito1.PNG)
+
+> * **Buscar Campaña:** Utilice la barra de búsqueda para encontrar la promoción a la que se vinculará el requisito, escribiendo parte del **ID** o **nombre** de la campaña.
+> * **Selección de Campaña:** Haga clic en la tarjeta de la campaña (ej. *CAMP-000, ID: 13704*) para seleccionarla. El sistema resaltará la campaña elegida.
+
+Una vez seleccionada la campaña, se procede a definir el artículo y sus condiciones de requisito:
+
+> * **Buscar Artículo:** Ingrese el **ID**, **nombre** o **descripción** del producto que será el requisito en el campo de búsqueda.
+> * **Selección de Artículo:** Haga clic en la tarjeta del artículo deseado (ej. *AGUA CON GAS 1 LITRO OW*) para seleccionarlo.
+
+![Modal Agregar Requisito 2](./imagen/ModalAgregarRequisito2.PNG)
+
+Una vez seleccionado el artículo, debe configurar las condiciones que el cliente debe cumplir:
+
+> * **Cantidad Requerida:** Ingrese la **cantidad mínima** de unidades de este artículo que el cliente debe poseer o comprar para aplicar a la promoción (ej. *1*).
+> * **Cantidad Mínima / Máxima:** Estos campos definen el rango de unidades al cual se aplicarán las condiciones del requisito.
+> * **Precio Promocional:** El precio especial o valor asociado a la condición del requisito.
+
+**Finalización de la Adición**
+
+> * **Agregar Requisito:** Una vez que todos los campos de condición estén definidos, haga clic en este botón verde para guardar el requisito y asociarlo a la campaña.
+> * **Cancelar:** Cierra el modal sin guardar el requisito.
+
+> **Notificaciones de Resultado:**
+> * **Éxito:** Si el requisito se inserta correctamente en la campaña, aparecerá una notificación de **Éxito**.
+> * **Error:** Si el artículo ya ha sido definido como requisito para esa campaña, el sistema mostrará una notificación de **Error** indicando que la operación no se completó.
+
+## 4. Crear Nueva Campaña
+
