@@ -177,3 +177,138 @@ Una vez seleccionado el artículo, debe configurar las condiciones que el client
 
 ## 4. Crear Nueva Campaña
 
+Al seleccionar la opción **Crear Campaña** en el menú de **Gestión Principal**, se accede a una vista detallada para configurar la promoción desde cero. Esta vista se divide en dos pestañas principales: **General** y **Artículos**.
+
+### Pestaña General
+
+Esta pestaña permite configurar los datos básicos y las condiciones principales de la campaña.
+
+![Modal CrearCampaña](./imagen/crearCampaña1.PNG)
+
+#### Información General
+
+* **Nombre de la Campaña:** Ingrese un nombre descriptivo para la promoción (Ej. *Promoción Verano 2024*).
+* **Prioridad:** Utilice el desplegable para seleccionar el nivel de importancia: **Baja**, **Media**, **Alta** o **Muy Alta**.
+* **Tipo de Campaña:** Seleccione en el desplegable la modalidad:
+    * Si elige **Por Cliente**, se habilitará la pestaña **Clientes**.
+    * Si elige **Por Lista**, se habilitará la pestaña **Listas**.
+* **Requiere Requisito:** Es un campo **opcional**. Marque esta casilla (**check**) si desea que la promoción solo aplique a clientes que cumplan una condición previa (ej. comprar un artículo mínimo). Al marcarlo, se habilita la pestaña **Requisitos**.
+* **Descripción, Fecha de Inicio / Fin, y Estado:** Defina los demás detalles de la campaña.
+
+
+### Pestaña Artículos
+
+Esta pestaña está siempre disponible y se utiliza para configurar los productos que forman parte de la promoción.
+
+![Modal CrearCampaña](./imagen/crearCampañaArticulo.PNG)
+
+### Pestañas Clientes / Listas
+
+Una de estas pestañas se habilitará automáticamente según el **Tipo de Campaña** seleccionado en la Pestaña General:
+
+#### A. Pestaña Clientes (Si Tipo de Campaña = Por Cliente)
+
+* **Buscar Cliente por ID:** Permite buscar clientes de forma individual, ingresando su ID (clíid).
+* **Clientes Seleccionados:** Muestra una lista temporal de clientes agregados. Al hacer clic en **+ Agregar X Cliente(s)**, estos se asocian permanentemente a la campaña, apareciendo en **Clientes de la Campaña**.
+
+![Pestaña Clientes en Crear Campaña](./imagen/crearCampañaCliente.PNG)
+
+#### B. Pestaña Listas (Si Tipo de Campaña = Por Lista)
+
+* **Listas de Precios:** Permite asociar una o varias listas de precios específicas a la campaña.
+* **Buscar Lista:** Utilice el campo para buscar y agregar listas de precios, las cuales aparecerán en **Listas Agregadas**.
+
+![Pestaña Listas en Crear Campaña](./imagen/crearCampañaLista.PNG)
+
+
+### Pestaña Requisitos (Condicional)
+
+Esta pestaña solo se habilita si se marca la opción **Requiere Requisito** en la Pestaña General.
+
+* **Requisitos de la Campaña:** Permite configurar los artículos y las cantidades mínimas que el cliente debe comprar o poseer para calificar a la promoción.
+* **+ Agregar Requisito:** Utilice este botón para añadir una nueva fila de requisitos, donde podrá seleccionar el artículo y definir la **Cantidad Requerida**, **Cantidad Mínima/Máxima** y el **Precio Promocional** asociado a la condición.
+
+![Pestaña Requisitos en Crear Campaña](./imagen/crearCampañaRequisito.PNG)
+
+
+
+### Guardar Campaña
+
+* **Guardar Campaña:** Haga clic en este botón verde para registrar la campaña con toda la configuración definida en las pestañas.
+* **Cancelar:** Descarta todos los cambios y regresa a la vista anterior.
+
+## 5. Carga Masiva
+
+La funcionalidad de **Carga Masiva** permite crear campañas de manera eficiente, utilizando plantillas de Excel(.xlsx) para importar grandes volúmenes de datos. Se accede seleccionando **Carga Masiva** en el menú de Gestión Principal. El proceso está guiado por Pasos de **1 a 5 pasos**.
+
+elegimos Que Tipo de Carga Vamos a Realizar
+
+
+![Pestaña Requisitos en Crear Campaña](./imagen/CargaMasiva1.png)
+
+**Paso 1: Seleccionar Tipo de Carga (Por Cliente)**
+
+Este primer paso define la estructura de los datos que se importarán.
+
+![Pestaña Requisitos en Crear Campaña](./imagen/CargaMasivaPorCliente1.png)
+
+>**Configuración de Carga:** Utilice el menú desplegable **Tipo de Carga** para seleccionar la modalidad de importación.
+**Opción seleccionada:** **Campaña por Cliente** (Crea campañas asociadas a clientes específicos con artículos y requisitos).
+**Detalles del Tipo Seleccionado:** El sistema le indica los archivos y hojas esperados.
+    **Archivo esperado:** `CampañaPorCliente.xlsx`
+    **Hoja requerida:** `PorCliente`
+**Acción:** Confirme la selección y haga clic en **Siguiente**
+
+* **Paso 2: Cargar Archivos**
+
+Este paso se enfoca en proporcionar el archivo de datos.
+
+![Pantalla paso 2.1](./imagen/CargaMasivaPorCliente2.png)
+
+>**Preparación de la Plantilla:** Consulte la pestaña **Instrucciones** para ver la estructura requerida para la carga por cliente.
+    * **Columnas Clave:** Se esperan grupos de columnas como `campaigns/*`, `articles/*`, `clients/*`, y `requirements/*` (opcional).
+**Validaciones:** Se realizan verificaciones sobre la prioridad, rangos de cantidad y precios correctos.
+**Subida de Archivo:** Utilice la zona de carga para subir su archivo **Excel** (`.xlsx`) ya preparado.
+**Archivos Cargados:** Los archivos subidos aparecerán listados con estado '**pending**' (pendiente).
+**Acción:** Suba el archivo y haga clic en **Siguiente**.
+
+![Pantalla paso 2.2](./imagen/CargaMasivaPorCliente3.png)
+
+## Paso 3: Validar Archivos
+
+En este paso se inicia la verificación de los datos.
+
+![Pantalla paso 3](./imagen/CargaMasivaPorCliente4.png)
+>**Botón Validar Todos:** Haga clic en este botón para que el sistema inicie el proceso de lectura, validación de estructura y validación de datos de todos los archivos en estado 'pending'.
+**Progreso:** El estado de cada archivo se actualiza, mostrando el progreso de la validación.
+**Resultados de la Validación:**
+    * Estado '**validated**' (Validado): Indica que el archivo es correcto y está listo para ser revisado y guardado. Se muestra una notificación de **Éxito** (ej. "X registros listos para revisar").
+    * Estado '**error**' (Error): Se encontraron errores de datos o formato. El sistema proporciona un mensaje de **Error** detallando los fallos (ej. "Fila X: Campo Y - Mensaje de error").
+**Acción:** Asegúrese de que todos los archivos estén en estado '**validated**'. Si hay errores, debe corregir el archivo Excel original y volver a subirlo. Haga clic en **Siguiente**.
+
+
+**Error**
+![Pantalla paso 3](./imagen/CargaMasivaPorCliente6.png)
+
+## Paso 4: Previsualizar y Editar Datos
+
+Este paso permite una revisión de los datos validados y la corrección manual antes de la inserción final.
+
+* **Acordeón de Archivos:** Los archivos validados se agrupan. Al desplegar cada uno, se muestra una **tabla de datos** donde puede previsualizar y editar los registros cargados.
+* **Edición de Datos:** Puede modificar los valores de las celdas **directamente en la tabla**.
+* **Guardar Cambios:** Las modificaciones se guardan internamente en el sistema antes de la inserción a la base de datos, lo cual se confirma con una notificación de **Éxito** (ej. "X registros actualizados").
+* **Acción:** Revise los registros y haga los ajustes finales. Haga clic en **Siguiente**.
+
+---
+
+## Paso 5: Revisar y Acciones Finales
+
+El último paso confirma la cantidad de datos a insertar y ejecuta la acción final.
+
+* **Resumen:** Muestra la cantidad de archivos validados y el total de registros listos para la inserción en la **Base de Datos (BD)**.
+* **Acciones:**
+    * **Insertar en BD:** Ejecuta la Carga Masiva. Al hacer clic, el sistema procesa los datos validados.
+        * **Éxito:** Muestra una notificación indicando cuántos archivos se insertaron correctamente (ej. "X archivo(s) insertado(s) correctamente").
+        * **Error:** Si hay fallas al comunicarse con el servidor o al insertar datos, se mostrará un mensaje de **Error al insertar datos**.
+    * **Descargar JSON:** Permite descargar todos los registros validados en formato `.json` para fines de auditoría o uso externo.
+* **Acción:** Haga clic en **Insertar en BD** para finalizar la Carga Masiva.
