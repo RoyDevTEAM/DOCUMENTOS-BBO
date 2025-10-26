@@ -85,3 +85,33 @@ Una vez seleccionada la campaña, se habilita la búsqueda y adición individual
 > **Notificaciones de Resultado:**
 > * **Éxito:** Si el cliente se inserta correctamente, aparecerá una notificación de **Éxito**.
 > * **Error:** Si el cliente ya existe en la campaña, el sistema mostrará una notificación de **Error** indicando que el cliente no puede ser agregado nuevamente.
+
+
+**Agregar Artículo a Campaña:** Esta funcionalidad permite asociar productos específicos a una campaña promocional, definiendo sus condiciones de cantidad y precio. Se accede haciendo clic en el botón **Agregar Artículo** en el encabezado de la **Gestión de Campañas**.
+
+![Modal Agregar Articulo 1](./imagen/ModalAgregarArticulo1.PNG)
+
+> * **Buscar Campaña:** Utilice la barra de búsqueda para encontrar la promoción deseada, escribiendo parte del **ID** o **nombre** de la campaña.
+> * **Selección de Campaña:** Haga clic en la tarjeta de la campaña (ej. *CAMP-000, ID: 13704*) para seleccionarla. El sistema resaltará la campaña elegida, habilitando el siguiente paso.
+
+Una vez seleccionada la campaña, se habilita la búsqueda y adición del artículo:
+
+> * **Buscar Artículo:** Ingrese el **ID**, **nombre** o **descripción** del producto en el campo de búsqueda.
+> * **Selección de Artículo:** Haga clic en la tarjeta del artículo deseado (ej. *AGUA CON GAS 1 LITRO OW, ID: 30-0-11-1*) para seleccionarlo.
+
+![Modal Agregar Articulo 2](./imagen/ModalAgregarArticulo2.PNG)
+
+Una vez seleccionado el artículo, debe configurar las condiciones promocionales:
+
+> * **Cantidad Mínima:** Ingrese la **cantidad mínima** de unidades que el cliente debe comprar para que aplique el precio promocional (ej. *1*).
+> * **Cantidad Máxima:** Ingrese la **cantidad máxima** de unidades a las que se puede aplicar el precio promocional (ej. *100*).
+> * **Precio Promocional:** Defina el **precio especial** que se aplicará al artículo (ej. *120*).
+
+**Finalización de la Adición**
+
+> * **Agregar Artículo:** Una vez que todos los campos y selecciones estén correctos, haga clic en este botón para asociar el producto y sus condiciones a la campaña.
+> * **Cancelar:** Cierra el modal sin guardar el artículo ni las condiciones definidas.
+
+> **Notificaciones de Resultado:**
+> * **Éxito:** Si el artículo se inserta correctamente, aparecerá una notificación de **Éxito**.
+> * **Error:** Si el artículo ya está asociado a esa campaña, el sistema mostrará una notificación de **Error** indicando que la inserción no se completó.
