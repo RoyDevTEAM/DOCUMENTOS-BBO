@@ -376,7 +376,7 @@ Haga clic en el botón **"Insertar X registros"** para iniciar el proceso.
 **Control:**  
 Use el botón **"Cancelar"** para detener la inserción si es necesario.
 
-## 5. Carga Masiva (Campaña Masiva)
+## 6. Carga Masiva (Campaña Masiva)
 
 La funcionalidad de **Carga Masiva** permite crear campañas de manera eficiente, utilizando plantillas de Excel(.xlsx) para importar grandes volúmenes de datos. Se accede seleccionando **Carga Masiva** en el menú de Gestión Principal. El proceso está guiado por Pasos de **1 a 5 pasos**.
 
@@ -461,3 +461,110 @@ El último paso confirma la cantidad de datos a insertar y ejecuta la acción fi
 **Acción:** Haga clic en **Insertar en BD** para finalizar la Carga Masiva.
 
 ![Pantalla paso 5](./imagen/CargaMasivaPorCliente11.png)
+
+## 7 Configuraciones.
+
+
+**Configuración General:**: Personalización de apariencia y preferencias
+**Perfil de Usuario:**  Información personal y gestión de seguridad
+
+![Pantalla configuraciones](./imagen/configuracion.PNG)
+
+#### Tema
+>- **Propósito**: Seleccionar el esquema de colores del sistema
+>- **Opciones disponibles**:
+>   `Claro`: Interfaz con colores claros
+>   `Oscuro`: Interfaz con colores oscuros
+>   `Sistema`: Se adapta automáticamente a la configuración del dispositivo del usuario
+
+#### Tamaño de Fuente
+>- **Propósito**: Ajustar el tamaño del texto en toda la interfaz
+>- **Opciones disponibles**:
+   `Pequeño`: Texto de tamaño reducido
+   `Mediano`: Texto de tamaño estándar (recomendado)
+   `Grande`: Texto de tamaño ampliado para mejor legibilidad
+
+
+#### Notificaciones del Sistema
+>- **Propósito**: Activar/desactivar notificaciones en tiempo real dentro de la aplicación
+>- **Funcionalidad**: Muestra alertas y mensajes emergentes durante el uso
+
+#### Botón "Guardar Cambios"
+>- **Propósito**: Aplicar todas las configuraciones modificadas
+>- **Comportamiento**:
+   Muestra spinner de carga durante el proceso
+   Emite mensaje de confirmación al completar
+   Las preferencias se aplican inmediatamente
+
+#### Botón "Restablecer"
+>- **Propósito**: Volver a la configuración predeterminada del sistema
+>- **Efecto**:
+   Restaura todos los valores por defecto
+   Cambia el tema a "Sistema"
+   Emite mensaje de confirmación
+
+
+
+### Información Personal
+
+#### Cabecera de Perfil
+> **Avatar**: Imagen o iniciales basadas en el nombre de usuario
+ **Nombre completo**: Muestra el nombre real del usuario
+ **Correo electrónico**: Dirección de email institucional
+ **Departamento**: Área o departamento asignado
+
+![Pantalla configuraciones](./imagen/configuracion1.PNG)
+
+#### Datos de Solo Lectura
+
+
+>**Nombre de usuario**: Identificador único en el sistema
+**Nombre completo**: Nombre y apellidos
+**Correo electrónico**: Dirección corporativa
+**Departamento**: Unidad organizativa
+**Roles**: Lista de permisos y niveles de acceso asignados
+
+### Cambio de Contraseña
+
+
+![Pantalla configuraciones](./imagen/configuracion2.PNG)
+#### Políticas de Seguridad
+> **Longitud mínima:** 8 caracteres
+ **Requisito de Contraseña:** Al menos una letra mayúscula (A-Z), Al menos un número (0-9) O un carácter especial
+ **Restricción histórica:** No se pueden reutilizar contraseñas anteriores.
+ **Cambio obligatorio**: El sistema solicita cambio automáticamente cada 60 días por políticas de seguridad
+
+#### Proceso Paso a Paso
+
+##### Campo "Contraseña actual"
+>**Propósito**: Verificar la identidad del usuario
+ **Requisito**: Debe coincidir con la contraseña vigente
+
+##### Campo "Nueva contraseña"
+> **Propósito**: Establecer la nueva credencial
+> **Validaciones**:
+>  - Mínimo 8 caracteres
+>  - Al menos una letra mayúscula (A-Z) 
+>  - Al menos un número (0-9) O un carácter especial
+>  - No puede ser igual a contraseñas anteriores (últimos 60 días)
+
+##### Campo "Confirmar nueva contraseña"
+> **Propósito**: Verificar que la nueva contraseña se haya escrito correctamente
+ **Validación**: Debe coincidir exactamente con el campo "Nueva contraseña"
+
+##### Botón "Cambiar contraseña"
+- **Acción**: Envía la solicitud de cambio al servidor
+- **Indicador visual**: Muestra spinner de carga durante el proceso
+- **Comportamiento post-cambio**:
+  - Limpia automáticamente todos los campos
+  - Muestra mensaje de confirmación
+  - Registra el cambio para el historial de contraseñas
+
+#### Mensajes de Error y Validación
+
+| Error | Mensaje | Causa |
+|-------|---------|-------|
+| Contraseñas no coinciden | "Las contraseñas no coinciden" | Los campos nueva y confirmación son diferentes |
+| Contraseña muy corta | "La contraseña debe tener al menos 8 caracteres" | No cumple longitud mínima |
+| Error de servidor | Mensaje específico del sistema | Problemas de conexión o validación en backend |
+| Contraseña anterior | "No puede utilizar contraseñas anteriores" | Intento de reutilizar contraseña histórica |
