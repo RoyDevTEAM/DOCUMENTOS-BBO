@@ -11,6 +11,13 @@ El sistema ofrece **dos métodos de inicio de sesión**
 
 El usuario debe seleccionar el método de inicio de sesión que desea utilizar e ingresar sus **credenciales correspondientes** (usuario y contraseña) para acceder al sistema.
 
+### Sistema de seguridad
+
+>Reglas de Bloqueo Automático, Por Equivocacion de Contraseña
+Límite de intentos: 3 intentos fallidos consecutivos
+Duración del bloqueo: 30 minutos
+Alcance: Aplicable a ambos métodos de autenticación (AD y Unity)
+
 ## 2. Dashboard Del Sistema
 
 El **Dashboard** (Tablero Principal) es la primera pantalla que se visualiza al ingresar al sistema. Está diseñado para ofrecer una **visión general y rápida** de lo que Ofrece el Sistema.
