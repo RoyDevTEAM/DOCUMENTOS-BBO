@@ -23,12 +23,13 @@ En el lado izquierdo de la pantalla se encuentra el menú de navegación, dividi
     >**Dashboard:** La vista actual.
     **Campañas:** Gestionar y ver todas las campañas.
     **+ Crear Campaña:** Iniciar el proceso de creación de una nueva campaña.
-    **Carga Masiva:** Funcionalidad para cargar datos o campañas de forma masiva.
+    **Cargas Masivas:** (Funcionalidad para cargar datos o campañas de forma masiva)
+    **Lista Precio Artículo**
+    **Campañas masivas**
     **Reportes:** Acceder a informes detallados.
     **Plantillas:** Gestionar las plantillas utilizadas en las campañas.
 * **Herramientas:** Funciones de configuración y búsqueda.
-    >**Buscar:** Para encontrar elementos dentro del sistema.
-    **Configuración:** Acceder a los ajustes del sistema.
+    >**Configuración:** Acceder a los ajustes del sistema.
 
 Al pie del menú también se encuentra la opción **Modo Oscuro** para cambiar la interfaz visual.
 
@@ -236,13 +237,40 @@ Una de estas pestañas se habilitará automáticamente según el **Tipo de Campa
 
 ![Pestaña Clientes en Crear Campaña](./imagen/crearCampañaCliente.PNG)
 
+>**Búsqueda Exitosa** | Al ingresar el ID y hacer clic en **Buscar**, el sistema muestra el cliente encontrado con su ID, NIT y nombre. Un botón **+ Agregar** aparece al lado derecho. |
+| **Cliente Encontrado y Agregado a Selección Temporal** | Al hacer clic en **+ Agregar**, el cliente se mueve inmediatamente al campo **Clientes Seleccionados** como un tag (`Roider Millares Mano (201444)`). |
+| **Búsqueda Fallida** | Si el ID ingresado no existe, se muestra un mensaje de "No hay cliente" o similar en el área de resultados.
+
+![Pestaña Clientes en Crear Campaña](./imagen/crearCampañaCliente1.PNG)
+
+**Clientes Seleccionados:** Muestra una lista temporal de clientes. Para asociarlos a la campaña, debe finalizar el proceso.
+
+![Pestaña Clientes en Crear Campaña](./imagen/crearCampañaCliente2.PNG)
+
+**Confirmar Adición** | Se hace clic en el botón **+ Agregar X Cliente(s)** (donde X es el número de clientes seleccionados). 
+**Clientes de la Campaña** | El cliente se asocia de forma permanente y se lista en la sección **Clientes de la Campaña (X)**, mostrando su ID y nombre (`201444 - Roider Millares Mano`). Se incluye un ícono de eliminación Para Eliminar el Cliente.
+
+![Pestaña Clientes en Crear Campaña](./imagen/crearCampañaCliente3.PNG)
+
 #### B. Pestaña Listas (Si Tipo de Campaña = Por Lista)
 
 >**Listas de Precios:** Permite asociar una o varias listas de precios específicas a la campaña.
 **Buscar Lista:** Utilice el campo para buscar y agregar listas de precios, las cuales aparecerán en **Listas Agregadas**.
 
-![Pestaña Listas en Crear Campaña](./imagen/crearCampañaLista.PNG)
+![Pestaña Listas en Crear Campaña](./imagen/crearCampañaLista1.PNG)
 
+>**Buscar/Seleccionar** Al hacer clic en el campo **Buscar lista...**, se despliega una lista de todas las listas de precios disponibles, las cuales pueden ser filtradas por ID o nombre. Ejemplo: `217 - AIDISA BENI - AGENCIAS`.
+**Selección Múltiple**  Puedes seleccionar una lista a la vez. Cada vez que seleccionas una, esta se agrega a la sección **Listas Agregadas** y puedes volver a hacer clic en el campo **Buscar lista...** para seleccionar otra.
+
+![Pestaña Listas en Crear Campaña](./imagen/crearCampañaLista2.PNG)
+
+**Listas Agregadas (X):** Muestra el listado de todas las listas de precios que han sido seleccionadas y asociadas a la campaña.
+
+>**Visualización:** Cada lista se muestra con su ID y nombre (Ejemplo: `48 - AIDISA BENI`).
+**Eliminación:** Cada lista cuenta con un ícono (papelera) para poder eliminarla de la lista de asociación antes de guardar la campaña.
+**Guardar Campaña:** Una vez que todas las listas deseadas están agregadas, se hace clic en el botón **Guardar Campaña** ubicado en la parte inferior derecha para finalizar la creación o edición de la campaña con las listas asociadas.
+
+![Pestaña Listas en Crear Campaña](./imagen/crearCampañaLista3.PNG)
 
 ### Pestaña Requisitos (Condicional)
 
@@ -259,7 +287,96 @@ Esta pestaña solo se habilita si se marca la opción **Requiere Requisito** en 
 * **Guardar Campaña:** Haga clic en este botón verde para registrar la campaña con toda la configuración definida en las pestañas.
 * **Cancelar:** Descarta todos los cambios y regresa a la vista anterior.
 
-## 5. Carga Masiva
+## 5. Carga Masiva (Lista Precio Articulo)
+
+
+La funcionalidad de **Carga Masiva** guía al usuario a través de un asistente de **5 Pasos** para importar listas de precios por artículo de manera eficiente, asegurando la **validación de los datos antes de la inserción**.
+
+
+**Paso 1: Descargar Plantilla**
+
+>**Al darle a descargar Plantilla:**  
+Obtiene la plantilla oficial **`.XLSX`** que define las columnas requeridas por el sistema.
+**Acción:**  
+Haga clic en el botón **"Descargar Plantilla .XLSX"**.
+**Avanzar:**  
+Haga clic en **"Siguiente"** para continuar.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio1.PNG)
+
+**Paso 2: Cargar Archivo**
+
+Subir el archivo Excel con los datos de precios actualizados. Arrastrando el Archivo o Dando Click Para seleccionar el Archivo.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio2.PNG)
+
+>**Objetivo:**  
+Subir el archivo **Excel** llenado con los datos de Lista Precio Articulo
+**Acción:**  
+Arrastre o haga clic en el área de carga para seleccionar su archivo.
+**Vista Previa:**  
+El archivo subido (por ejemplo: `CargaLISTAPRECIOMASIVA(1).xlsx`) aparecerá listado con el estado **Pendiente**.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio3.PNG)
+**Avanzar:**  
+Haga clic en **"Siguiente"**.
+
+
+**Paso 3: Validar Datos**
+
+
+Verificar la integridad y estructura de los datos antes de insertarlos en la base de datos.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio4.PNG)
+
+>**Acción:**  
+Haga clic en **"Validar Todos"** para iniciar la verificación de los archivos pendientes.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio5.PNG)
+
+>**Resultado:**  
+Si es exitoso, el estado cambia a **Validado** y se confirma que los registros están listos para insertar.
+si es Error Se listan errores de validación por fila.
+
+**Avanzar:**  
+Haga clic en **"Siguiente"** una vez que el archivo esté validado.
+
+
+**Paso 4: Editar Datos**
+
+Revisar y realizar **correcciones manuales** a los datos validados antes de la inserción.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio6.PNG)
+
+>**Acción:**  
+Despliegue el archivo haciendo clic en su nombre. Se mostrará una **tabla con los datos cargados**.
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio7.PNG)
+
+>**Corrección:**  
+Puede **editar los valores directamente** en la tabla y luego hacer clic en **"Guardar Cambios"**.
+
+**Avanzar:**  
+Haga clic en **"Siguiente"**.
+
+
+
+**Paso 5: Insertar en BD**
+
+Ejecutar la **carga de los registros validados y corregidos** a la Base de Datos (BD).
+
+![Pestaña ListaPrecioArticulo](./imagen/CargaMasivaListaPrecio8.PNG)
+
+**Resumen:**  
+Se muestra el **total de registros listos para insertar**.
+
+**Acción Final:**  
+Haga clic en el botón **"Insertar X registros"** para iniciar el proceso.
+
+**Control:**  
+Use el botón **"Cancelar"** para detener la inserción si es necesario.
+
+## 5. Carga Masiva (Campaña Masiva)
 
 La funcionalidad de **Carga Masiva** permite crear campañas de manera eficiente, utilizando plantillas de Excel(.xlsx) para importar grandes volúmenes de datos. Se accede seleccionando **Carga Masiva** en el menú de Gestión Principal. El proceso está guiado por Pasos de **1 a 5 pasos**.
 
@@ -281,7 +398,7 @@ Este primer paso define la estructura de los datos que se importarán.
     **Hoja requerida:** `PorCliente`
 **Acción:** Confirme la selección y haga clic en **Siguiente**
 
-* **Paso 2: Cargar Archivos**
+**Paso 2: Cargar Archivos**
 
 Este paso se enfoca en proporcionar el archivo de datos.
 
@@ -296,7 +413,7 @@ Este paso se enfoca en proporcionar el archivo de datos.
 
 ![Pantalla paso 2.2](./imagen/CargaMasivaPorCliente3.png)
 
-## Paso 3: Validar Archivos
+**Paso 3: Validar Archivos**
 
 En este paso se inicia la verificación de los datos.
 
@@ -314,7 +431,7 @@ En este paso se inicia la verificación de los datos.
 **Error**
 ![Pantalla paso 3](./imagen/CargaMasivaPorCliente6.png)
 
-## Paso 4: Previsualizar y Editar Datos
+**Paso 4: Previsualizar y Editar Datos**
 
 Este paso permite una revisión de los datos validados y la corrección manual antes de la inserción final.
 
@@ -329,7 +446,7 @@ Este paso permite una revisión de los datos validados y la corrección manual a
 
 ![Pantalla paso 4](./imagen/CargaMasivaPorCliente9.png)
 
-## Paso 5: Revisar y Acciones Finales
+**Paso 5: Revisar y Acciones Finales**
 
 El último paso confirma la cantidad de datos a insertar y ejecuta la acción final.
 
