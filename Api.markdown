@@ -1,6 +1,6 @@
 # Documentación - Arquitectura por Capas PreventaBBO
 
-## 🏗️ Arquitectura General
+## Arquitectura General
 
 ### Diagrama de Capas
 ┌─────────────────────────────────────────────────┐
