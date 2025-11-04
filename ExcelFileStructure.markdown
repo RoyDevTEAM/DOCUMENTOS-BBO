@@ -138,7 +138,6 @@ CAMP-NOV2025	Promo noviembre	01/11/2025	30/11/2025	Alta	PorLista	Sí
 ```excel
 articles/CampNombre	articles/artid	articles/artNombre	articles/cantidadMin	articles/cantidadMax	articles/precioPromocional	ListaPrecio/LisId	ListaPrecio/LisNombre	requirements/artidRequisito	requirements/cantidadRequisito	requirements/cantidadMin	requirements/cantidadMax	requirements/precioPromocional
 CAMP-NOV2025	61-0-11-6	Agua 2L x6	6	24	19.50	202	EVENTUAL 2	33-0-3-12	1	1	12	45.00
-CAMP-NOV2025	61-0-11-7	Gaseosa 3L	4	12	28.00	101	MAYORISTA				
 ```
 
 ---
@@ -152,7 +151,3 @@ CAMP-NOV2025	61-0-11-7	Gaseosa 3L	4	12	28.00	101	MAYORISTA
 - Función: `validateCampaignListExcel(file)`
 - Transform: `transformCampaignListForBackend(data)`
 
----
-¿
-¡Actualizado 100% con tu nuevo código!
-```
