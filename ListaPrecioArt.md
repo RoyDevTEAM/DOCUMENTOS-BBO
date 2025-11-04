@@ -1,4 +1,3 @@
-```markdown
 # Estructura del Archivo Excel para Carga Masiva de Lista de Precios por Artículo
 
 ## 1. Estructura General del Archivo Excel
@@ -143,22 +142,3 @@ ListaPrecioArticulo/artId	ListaPrecioArticulo/artNombre	ListaPrecioArticulo/lpaP
 ```
 
 > **Descarga esta plantilla** y complétala con tus datos.
-
----
-
-**Listo para usar en tu repositorio ETS.**
-```
-
----
-
-**Para descargar como archivo `.md`:**
-
-1. Copia todo el contenido de arriba.
-2. Pégalo en un editor de texto (como VS Code, Notepad++ o Bloc de notas).
-3. Guárdalo como: `PLANTILLA_LISTA_PRECIO_ARTICULO.md`
-
-O haz clic derecho en este enlace (si estás en un navegador compatible):
-
-[Descargar Plantilla Markdown](data:text/plain;charset=utf-8,{{URL_ENCODED_CONTENT}})
-
-*(Nota: Si necesitas el enlace real para descargar, puedo generarte un gist o base64, pero aquí tienes el contenido 100% listo.)*
