@@ -1,11 +1,11 @@
 # Flujo de Funcionamiento de una App de Pedidos de Bebidas Gaseosas en Bolivia
 
-A continuación, se detalla el **flujo de funcionamiento** de una **aplicación de pedidos** para bebidas gaseosas en Bolivia, con soporte para recorridos, selección de clientes, división de pedidos, cálculos en bolivianos, pedidos múltiples y validación/aprobación.
+
 
 ---
 
 ## 1. **Inicio de Sesión / Registro**
-- **Acceso**: El vendedor inicia sesión con usuario/contraseña o biometría.
+- **Acceso**: El vendedor inicia sesión con usuario/contraseña.
 - **Roles**: Vendedor, Supervisor, Administrador.
 
 ---
@@ -143,7 +143,6 @@ graph TD
 | **Deudas** | Mostrar saldo pendiente del cliente. |
 | **Crédito** | Bloquear si excede límite. |
 | **Sincronización Offline** | Funciona sin internet, sube al reconectar. |
-| **Reportes** | Ventas diarias, por ruta, por producto. |
 
 ---
 
@@ -159,25 +158,3 @@ graph TD
 7. Supervisor aprueba → Se genera ruta de entrega.
 
 ---
-
-## 15. **Tecnología Sugerida**
-- **App móvil**: Flutter o React Native.
-- **Backend**: Node.js + PostgreSQL.
-- **Offline**: SQLite local + sincronización.
-- **Notificaciones**: Firebase / WhatsApp Business API.
-- **Impresión**: Bluetooth a impresora térmica.
-
----
-
-## 16. **Opciones Adicionales**
-¿Te interesa que desarrolle alguno de estos elementos?:
-- Un **prototipo en Figma**.
-- El **diagrama de base de datos**.
-- El **flujo en PDF**.
-- Un **nombre para la app** (Ej: `GaseoYa`, `PediGas`, `RutaRefrescos`).
-
-¡Avísame y lo trabajamos! 🚀
-
----
-
-**Fecha actual**: 5 de noviembre de 2025, 08:32 AM (-04).
