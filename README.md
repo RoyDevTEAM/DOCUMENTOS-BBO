@@ -40,7 +40,7 @@ graph TD
 ### Detalle por cliente:
 | Campo | Detalle |
 |-------|---------|
-| **Producto** | Lista de gaseosas (Coca-Cola, Inka Kola, etc.) |
+| **Producto** | Lista de gaseosas (mendocina , sinalco, etc.) |
 | **Presentación** | 500ml, 1.5L, 3L, pack x6, etc. |
 | **Cantidad** | Input numérico |
 | **Precio Unitario** | Automático según lista de precios (Bs.) |
@@ -151,8 +151,8 @@ graph TD
 2. Elige `Recorrido: Ruta Sur`.
 3. Busca `Juan Pérez`.
 4. Agrega:
-   - Coca-Cola 1.5L × 6 → 72 Bs.
-   - Inka Kola 500ml × 12 → 60 Bs.
+   - mendocina 1.5L × 6 → 72 Bs.
+   - Kola 500ml × 12 → 60 Bs.
 5. **Total**: 132 Bs.
 6. Toca `Enviar a Aprobación`.
 7. Supervisor aprueba → Se genera ruta de entrega.
