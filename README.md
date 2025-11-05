@@ -21,7 +21,7 @@ A continuación, se detalla el **flujo de funcionamiento** de una **aplicación 
 graph TD
     A[¿Recorrido o Fecha?] --> B[Opción 1: Seleccionar Recorrido]
     A --> C[Opción 2: Elegir Fecha Manual]
-    B --> D[Lista de recorridos predefinidos<br>(Ej: Ruta Norte, Ruta Sur, etc)]
+    B --> D[Lista de recorridos predefinidos - Ej: Ruta Norte, Ruta Sur, etc]
     C --> E[Calendario para elegir fecha]
 ```
 - **Recorrido**: Muestra clientes asignados a la ruta seleccionada.
@@ -66,7 +66,7 @@ Total por cliente = Subtotal - Descuento
 ## 7. **Paso 5: Dividir Pedido (Opcional – "Partir en 2")**
 ```mermaid
 graph LR
-    A[Cliente pide dividir] --> B[Botón: "Dividir Pedido"]
+    A[Cliente pide dividir] --> B[Botón: Dividir Pedido]
     B --> C[Crear Pedido 1 y Pedido 2]
     C --> D[Asignar productos a cada uno]
     D --> E[Generar 2 facturas/comprobantes]
