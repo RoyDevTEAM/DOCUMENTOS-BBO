@@ -610,7 +610,7 @@ gantt
     title Plan de Implementación
     dateFormat YYYY-MM-DD
     section Fase 1: Infraestructura
-    Crear tablas nuevas           :done, f1a, 2025-01-01, 2d
+    Crear tablas nuevas           :done, f1a, 2025-11-01, 2d
     Migrar datos existentes        :done, f1b, after f1a, 1d
     Crear stored procedures        :done, f1c, after f1b, 3d
     
