@@ -31,8 +31,6 @@ graph TD
   end
 ```
 
-## Entidades Clave (ER)
-```mermaid
 erDiagram
   VdtTransaccionTxn ||--o{ VdtPedidoTransaccionDetalleTxn : contiene
   VntListaPrecio ||--o{ VntListaPrecioArticulo : define
@@ -40,65 +38,65 @@ erDiagram
   VdtPedidoTransaccionDetalleTxn ||--o{ VdtDetallePedidoBaucher : vincula
   VdtPedidoTransaccionDetalleTxn ||--o{ AuditoriaPedidoDetalle : audita
   VntListaPrecio ||--o{ VdtConfigCliente : asigna
-
+  
   VdtTransaccionTxn {
-    long TraId
+    long TraId PK
     int TtxId
     long PedId
     string CliId
     datetime TraFechaTxn
   }
-
+  
   VdtPedidoTransaccionDetalleTxn {
-    long DtrId
+    long DtrId PK
     string ArtId
-    long TraId
-    long LpaId
-    long CbIdBase
-    long CbIdPorcentual
+    long TraId FK
+    long LpaId FK
+    long CbIdBase FK
+    long CbIdPorcentual FK
     decimal DtrCantidad
   }
-
+  
   VntListaPrecio {
-    long LisId
+    long LisId PK
     string LisNombre
     string LpEstado
   }
-
+  
   VntListaPrecioArticulo {
-    long LpaId
-    long LisId
+    long LpaId PK
+    long LisId FK
     string ArtId
     int TtxId
     datetime LpaFechaInicio
     datetime LpaFechaTermino
   }
-
+  
   VdtConfigBaucher {
-    long CbId
+    long CbId PK
     int CbEsBoucher
-    int? MarId
-    int? CalId
-    string? CbUnidadMinima
+    int MarId "nullable"
+    int CalId "nullable"
+    string CbUnidadMinima "nullable"
     datetime CbFechaInicio
     datetime CbFechaFinal
   }
-
+  
   VdtConfigBaucherDetalle {
-    long CbdId
-    long CbId
+    long CbdId PK
+    long CbId FK
     string CbdIdTipo
   }
-
+  
   VdtDetallePedidoBaucher {
-    long Id
+    long Id PK
     long IdPedido
-    long IdDetalle
-    long IdBaucher
+    long IdDetalle FK
+    long IdBaucher FK
   }
-
+  
   AuditoriaPedidoDetalle {
-    long AudId
+    long AudId PK
     long DtrId_Original
     long LpaId_Original
     long CbIdBase_Original
@@ -109,13 +107,12 @@ erDiagram
     long CbIdPorcentual_Nuevo
     datetime AudFecha
   }
-
+  
   VdtConfigCliente {
-    string CliId
-    long LisId
+    string CliId PK
+    long LisId FK
     string CliEstado
   }
-```
 
 ## Flujos Principales
 
