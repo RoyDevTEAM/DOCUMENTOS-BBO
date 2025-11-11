@@ -90,8 +90,8 @@ graph LR
 ## 9. **Paso 7: Resumen del Pedido**
 | Cliente | Productos | Cantidad | Total (Bs.) |
 |---------|-----------|----------|-------------|
-| Juan Pérez | Coca-Cola 1.5L x 6 | 6 | 72.00 |
-| María López | Inka Kola 3L x 2 | 2 | 40.00 |
+| Juan Pérez | Mendocina 1.5L x 6 | 6 | 72.00 |
+| María López | Mendocina Papaya 3L x 2 | 2 | 40.00 |
 | **TOTAL GENERAL** | | | **112.00** |
 
 - **Botones**:
