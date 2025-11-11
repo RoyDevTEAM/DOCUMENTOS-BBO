@@ -118,6 +118,38 @@ erDiagram
 
 ## Flujos Principales
 
+
+### Validar Préstamo de Envase
+```mermaid
+sequenceDiagram
+  participant API as API
+  participant QRY as ValidarPrestamoQueryHandler
+  participant REP as PreventaValidacionRepository
+  participant DB as AppDbContext
+
+  API->>QRY: GET /api/Preventa/validaciones/prestamo
+  QRY->>REP: ValidarPrestamoAsync(pedId, cliId, cpeId, artId, ttxId, cantidadNueva)
+  REP->>DB: Leer parámetros de préstamo (ConId=165) y tipo Ttx
+  REP->>DB: Validar equivalencia de Ttx (ConId=164 y abreviatura)
+  REP->>DB: Obtener gerente por cliente/estructura (VnvClienteEstructuras)
+  REP->>DB: Leer pedido y fecha (VdtPedidosTxns)
+  REP->>DB: Buscar campaña vigente con límite (VdtLimitesTransaccionTxns)
+  alt campaña encontrada
+    REP->>DB: Sumar cantidad prestada en rango (join VdtTransaccionTxns + VdtPedidoTransaccionDetalleTxns)
+  end
+  REP->>REP: Construir ValidacionPrestamoDto (saldo, total, reglas y errores)
+  REP-->>QRY: PreventaResponse<ValidacionPrestamoDto>
+  QRY-->>API: 200 OK
+```
+
+**Campos de respuesta (ValidacionPrestamoDto)**
+- `EntIdGerenteVenta`, `EntNombreGerenteVentas`
+- `ValidaPrestamo`, `TtxValida`, `EsPrestamoValido`
+- `CampaniaInicio`, `CampaniaFin`, `LimiteAprobado`
+- `CantidadYaPrestada`, `TotalDespuesDeAgregar`, `SaldoDisponible`
+- `MensajeValidacion`, `HayError`
+
+
 ### Aplicar Lista de Precios y Báucher a Pedido
 ```mermaid
 sequenceDiagram
