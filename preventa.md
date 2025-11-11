@@ -31,7 +31,8 @@ graph TD
   end
 ```
 
-
+## Entidades Clave (ER)
+```mermaid
 erDiagram
   VdtTransaccionTxn ||--o{ VdtPedidoTransaccionDetalleTxn : contiene
   VntListaPrecio ||--o{ VntListaPrecioArticulo : define
@@ -39,7 +40,7 @@ erDiagram
   VdtPedidoTransaccionDetalleTxn ||--o{ VdtDetallePedidoBaucher : vincula
   VdtPedidoTransaccionDetalleTxn ||--o{ AuditoriaPedidoDetalle : audita
   VntListaPrecio ||--o{ VdtConfigCliente : asigna
-  
+
   VdtTransaccionTxn {
     long TraId
     int TtxId
@@ -47,7 +48,7 @@ erDiagram
     string CliId
     datetime TraFechaTxn
   }
-  
+
   VdtPedidoTransaccionDetalleTxn {
     long DtrId
     string ArtId
@@ -57,13 +58,13 @@ erDiagram
     long CbIdPorcentual
     decimal DtrCantidad
   }
-  
+
   VntListaPrecio {
     long LisId
     string LisNombre
     string LpEstado
   }
-  
+
   VntListaPrecioArticulo {
     long LpaId
     long LisId
@@ -72,30 +73,30 @@ erDiagram
     datetime LpaFechaInicio
     datetime LpaFechaTermino
   }
-  
+
   VdtConfigBaucher {
     long CbId
     int CbEsBoucher
-    int MarId
-    int CalId
-    string CbUnidadMinima
+    int? MarId
+    int? CalId
+    string? CbUnidadMinima
     datetime CbFechaInicio
     datetime CbFechaFinal
   }
-  
+
   VdtConfigBaucherDetalle {
     long CbdId
     long CbId
     string CbdIdTipo
   }
-  
+
   VdtDetallePedidoBaucher {
     long Id
     long IdPedido
     long IdDetalle
     long IdBaucher
   }
-  
+
   AuditoriaPedidoDetalle {
     long AudId
     long DtrId_Original
@@ -108,12 +109,14 @@ erDiagram
     long CbIdPorcentual_Nuevo
     datetime AudFecha
   }
-  
+
   VdtConfigCliente {
     string CliId
     long LisId
     string CliEstado
   }
+```
+
 ## Flujos Principales
 
 ### Aplicar Lista de Precios y Báucher a Pedido
