@@ -1,7 +1,5 @@
 # Módulo de Preventa y Validación
 
-Este documento describe la arquitectura, entidades clave, flujos y endpoints del módulo de Preventa y Validación. Incluye diagramas Mermaid para una visión técnica detallada y profesional.
-
 ## Resumen
 - Objetivo: asegurar reglas de negocio de preventa (listas de precios, báuchers, campañas, aprobaciones y verificaciones) y exponer endpoints consistentes para validaciones.
 - Capas: API (controllers), Application (commands/queries/handlers), Infrastructure (repositories/DbContext), Domain (entities), Shared (wrappers/responses).
