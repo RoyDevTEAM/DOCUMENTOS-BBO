@@ -76,9 +76,9 @@ erDiagram
   VdtConfigBaucher {
     long CbId
     int CbEsBoucher
-    int? MarId
-    int? CalId
-    string? CbUnidadMinima
+    int MarId
+    int CalId
+    string CbUnidadMinima
     datetime CbFechaInicio
     datetime CbFechaFinal
   }
