@@ -31,6 +31,7 @@ graph TD
   end
 ```
 
+
 erDiagram
   VdtTransaccionTxn ||--o{ VdtPedidoTransaccionDetalleTxn : contiene
   VntListaPrecio ||--o{ VntListaPrecioArticulo : define
@@ -40,7 +41,7 @@ erDiagram
   VntListaPrecio ||--o{ VdtConfigCliente : asigna
   
   VdtTransaccionTxn {
-    long TraId PK
+    long TraId
     int TtxId
     long PedId
     string CliId
@@ -48,24 +49,24 @@ erDiagram
   }
   
   VdtPedidoTransaccionDetalleTxn {
-    long DtrId PK
+    long DtrId
     string ArtId
-    long TraId FK
-    long LpaId FK
-    long CbIdBase FK
-    long CbIdPorcentual FK
+    long TraId
+    long LpaId
+    long CbIdBase
+    long CbIdPorcentual
     decimal DtrCantidad
   }
   
   VntListaPrecio {
-    long LisId PK
+    long LisId
     string LisNombre
     string LpEstado
   }
   
   VntListaPrecioArticulo {
-    long LpaId PK
-    long LisId FK
+    long LpaId
+    long LisId
     string ArtId
     int TtxId
     datetime LpaFechaInicio
@@ -73,30 +74,30 @@ erDiagram
   }
   
   VdtConfigBaucher {
-    long CbId PK
+    long CbId
     int CbEsBoucher
-    int MarId "nullable"
-    int CalId "nullable"
-    string CbUnidadMinima "nullable"
+    int MarId
+    int CalId
+    string CbUnidadMinima
     datetime CbFechaInicio
     datetime CbFechaFinal
   }
   
   VdtConfigBaucherDetalle {
-    long CbdId PK
-    long CbId FK
+    long CbdId
+    long CbId
     string CbdIdTipo
   }
   
   VdtDetallePedidoBaucher {
-    long Id PK
+    long Id
     long IdPedido
-    long IdDetalle FK
-    long IdBaucher FK
+    long IdDetalle
+    long IdBaucher
   }
   
   AuditoriaPedidoDetalle {
-    long AudId PK
+    long AudId
     long DtrId_Original
     long LpaId_Original
     long CbIdBase_Original
@@ -109,11 +110,10 @@ erDiagram
   }
   
   VdtConfigCliente {
-    string CliId PK
-    long LisId FK
+    string CliId
+    long LisId
     string CliEstado
   }
-
 ## Flujos Principales
 
 ### Aplicar Lista de Precios y Báucher a Pedido
